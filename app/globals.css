@@ -76,6 +76,15 @@
   --sidebar-accent-foreground: oklch(0.21 0.006 285.885);
   --sidebar-border: oklch(0.92 0.004 286.32);
   --sidebar-ring: oklch(0.705 0.015 286.067);
+  --toast-bg: hsl(var(--background));
+  --toast-text: hsl(var(--foreground));
+  --toast-border: hsl(var(--border));
+  --toast-success-bg: hsl(143, 85%, 96%);
+  --toast-success-text: hsl(140, 100%, 27%);
+  --toast-error-bg: hsl(359, 100%, 97%);
+  --toast-error-text: hsl(358, 75%, 59%);
+  --toast-info-bg: hsl(216, 84%, 96%);
+  --toast-info-text: hsl(224, 76%, 48%);
 }
 
 .dark {
@@ -110,6 +119,46 @@
   --sidebar-accent-foreground: oklch(0.985 0 0);
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.552 0.016 285.938);
+}
+
+.sonner-toast-container {
+  --front-color: var(--toast-text);
+  padding: 20px 25px;
+}
+
+.sonner-toast {
+  background: var(--toast-bg);
+  color: var(--toast-text);
+  border: 1px solid var(--toast-border);
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  padding: 0.75rem 1rem;
+}
+
+.sonner-toast-title {
+  font-weight: 600;
+  font-size: 0.875rem;
+  margin-bottom: 0.25rem;
+}
+
+.sonner-toast-description {
+  font-size: 0.875rem;
+  opacity: 0.9;
+}
+
+.sonner-toast-success {
+  background: var(--toast-success-bg);
+  color: var(--toast-success-text);
+}
+
+.sonner-toast-error {
+  background: var(--toast-error-bg);
+  color: var(--toast-error-text);
+}
+
+.sonner-toast-info {
+  background: var(--toast-info-bg);
+  color: var(--toast-info-text);
 }
 
 @layer base {

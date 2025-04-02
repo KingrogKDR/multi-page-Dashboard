@@ -2,13 +2,10 @@
 
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { motion } from "framer-motion";
-import axios from "axios";
-import { useDispatch, useSelector } from "react-redux";
-import { fetchWeatherData } from "@/redux/slices/weatherSlice";
-import { Input } from "@/components/ui/input";
 import WeatherDetails from "@/components/WeatherDetails";
+import NewsApp from "@/components/NewsDetails";
 
 export default function Dashboard() {
   const [selectedTab, setSelectedTab] = useState("weather");
@@ -33,23 +30,6 @@ export default function Dashboard() {
           </Button>
         ))}
       </div>
-
-      {/* {selectedTab === "weather" && (
-        <div className="mb-4">
-          <form onSubmit={handleSearch} className="flex space-x-2">
-            <Input
-              type="text"
-              placeholder="Enter city name"
-              value={city}
-              onChange={(e) => setCity(e.target.value)}
-              className="w-full p-2 border rounded"
-            />
-            <Button type="submit" className="bg-blue-500 text-white">
-              Search
-            </Button>
-          </form>
-        </div>
-      )} */}
 
       <motion.div
         key={selectedTab}
@@ -80,30 +60,7 @@ export default function Dashboard() {
           </Card>
         )}
 
-        {selectedTab === "news" && (
-          <Card>
-            <CardContent className="p-4">
-              {newsData ? (
-                <ul>
-                  {newsData.map((news, index) => (
-                    <li key={index} className="mb-2">
-                      <a
-                        href={news.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-blue-500"
-                      >
-                        {news.title}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              ) : (
-                <p>Loading...</p>
-              )}
-            </CardContent>
-          </Card>
-        )}
+        {selectedTab === "news" && <NewsApp />}
       </motion.div>
     </div>
   );
