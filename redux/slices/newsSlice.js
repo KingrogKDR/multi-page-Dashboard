@@ -26,7 +26,7 @@ export const fetchCryptoNews = createAsyncThunk(
   "news/fetchCryptoNews",
   async () => {
     try {
-      let apiUrl = `https://newsdata.io/api/1/latest?apikey=pub_77633d45c6a3eaa4e1b75b4c18e1b7211d8ec&q=crypto&language=en`;
+      let apiUrl = `https://newsdata.io/api/1/latest?apikey=${process.env.NEXT_PUBLIC_NEWS_API_KEY}&q=crypto&language=en`;
 
       const response = await fetch(apiUrl);
 
