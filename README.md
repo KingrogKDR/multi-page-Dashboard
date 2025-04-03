@@ -1,36 +1,108 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Multi-Page Dashboard
 
-## Getting Started
+This is a multi-page dashboard built using **Next.js**, **Redux**, and **TailwindCSS**. It provides an intuitive and user-friendly interface for managing and visualizing data across multiple pages.
 
-First, run the development server:
+## Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- **Multi-page navigation** using Next.js App Router
+- **Global state management** with Redux Toolkit
+- **Responsive design** with TailwindCSS
+- **Optimized performance** with server-side rendering (SSR) and static generation (SSG)
+- **Reusable UI components** for a consistent look and feel
+
+## Technologies Used
+
+- **Next.js** - React framework for server-side rendering and static site generation
+- **Redux Toolkit** - State management
+- **TailwindCSS** - Utility-first CSS framework for styling
+
+## Setup & Installation
+
+### Prerequisites
+
+Ensure you have the following installed:
+
+- **Node.js** (LTS recommended)
+- **npm** or **yarn** package manager
+
+### Steps
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/KingrogKDR/multi-page-Dashboard.git
+   cd multi-page-Dashboard
+   ```
+
+2. Install dependencies:
+
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```
+
+3. Run the development server:
+
+   ```bash
+   npm run dev
+   # or
+   yarn dev
+   ```
+
+   The dashboard should now be accessible at `http://localhost:3000/`.
+
+4. Build for production:
+
+   ```bash
+   npm run build
+   npm start
+   ```
+
+## Project Structure
+
+```
+├── components/       # Reusable UI components
+├── app/              # Next.js App Router and server components
+├── redux/            # Redux store and slices
+├── public/           # Static assets
+├── .env.local        # Environment variables (not included in repo)
+├── package.json      # Project dependencies and scripts
+└── README.md         # Project documentation
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Usage Guide
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+- **Navigation**: Uses Next.js App Router (`app/` directory) with server components and dynamic routes.
+- **State Management**: Redux Toolkit is used for global state management. You can find slices inside `store/`.
+- **Styling**: TailwindCSS is used for styling. Custom styles can be added in `styles/`.
+- **API Integration**: Data fetching is handled using React Server Components and `fetch` within Server Actions.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Design Decisions
 
-## Learn More
+- **Next.js App Router for Modern Architecture**: Uses server components and client components for optimized rendering.
+- **Redux Toolkit for State Management**: Helps manage complex application state efficiently.
+- **TailwindCSS for Styling**: Ensures consistency, responsiveness, and maintainability.
+- **Component-based Approach**: UI elements are modular and reusable to improve scalability.
 
-To learn more about Next.js, take a look at the following resources:
+## Future Enhancements
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Implement authentication and authorization
+- Add dark mode support
+- Enhance UI with animations and micro-interactions
+- Improve accessibility features
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Contributing
 
-## Deploy on Vercel
+Contributions are welcome! Follow these steps:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. Fork the repository
+2. Create a new branch: `git checkout -b feature-branch`
+3. Commit your changes: `git commit -m 'Add new feature'`
+4. Push to the branch: `git push origin feature-branch`
+5. Submit a pull request
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## License
+
+This project is licensed under the MIT License. Feel free to modify and use it as per your needs.
+
